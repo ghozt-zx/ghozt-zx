@@ -1,5 +1,11 @@
 name: Update HUD Profile Card
 
+permissions:
+  contents: write
+
+on:
+  schedule:
+
 on:
   schedule:
     - cron: "0 */6 * * *"   # every 6 hours
