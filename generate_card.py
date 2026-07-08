@@ -70,6 +70,12 @@ def fetch_stats():
         if lang:
             lang_count[lang] = lang_count.get(lang, 0) + 1
     top_lang = max(lang_count, key=lang_count.get) if lang_count else "UNKNOWN"
+    lang_breakdown = sorted(lang_count.items(), key=lambda kv: kv[1], reverse=True)[:5]
+
+    recent_repos = sorted(
+        repos, key=lambda r: r.get("pushed_at") or "", reverse=True
+    )[:5]
+    recent_repo_names = [r["name"] for r in recent_repos]
 
     # contribution calendar + current streak via GraphQL
     query = """
@@ -116,6 +122,8 @@ def fetch_stats():
         "following": user.get("following", 0),
         "total_stars": total_stars,
         "top_lang": top_lang.upper(),
+        "lang_breakdown": lang_breakdown,
+        "recent_repos": recent_repo_names,
         "total_contribs": total_contribs,
         "streak": streak,
         "joined": joined,
@@ -223,15 +231,74 @@ def render_svg(s):
 
   <!-- footer -->
   <line x1="40" y1="270" x2="{WIDTH-40}" y2="270" stroke="{LINE}" stroke-width="1"/>
-  <text x="40" y="292" font-family="Consolas, monospace" font-size="12" fill="{ACCENT}" filter="url(#glow)">&gt; ------------------------GHOZT----------------------</text>
+  <text x="40" y="292" font-family="Consolas, monospace" font-size="12" fill="{ACCENT}" filter="url(#glow)">&gt; LOWER YOUR BLADE. THE LOG SPEAKS FOR ITSELF.</text>
   <text x="{WIDTH-40}" y="292" font-family="Consolas, monospace" font-size="10" fill="{TEXT_DIM}" text-anchor="end">STATUS: OK</text>
+</svg>'''
+    return svg
+
+
+def render_side_panel(s):
+    """Narrow tall panel: language breakdown + recent repos, styled like the
+    left-hand 'REMAINS' panel in the reference image."""
+    PW, PH = 260, 320
+    max_count = max((c for _, c in s["lang_breakdown"]), default=1)
+
+    corners = "".join([
+        bracket_corner(12, 12, 18, 1, 1),
+        bracket_corner(PW - 12, 12, 18, -1, 1),
+        bracket_corner(12, PH - 12, 18, 1, -1),
+        bracket_corner(PW - 12, PH - 12, 18, -1, -1),
+    ])
+
+    lang_y = 92
+    lang_svg = ""
+    for lang, count in s["lang_breakdown"]:
+        bar_w = int(140 * (count / max_count))
+        lang_svg += f'''
+        <text x="26" y="{lang_y}" font-family="Consolas, monospace" font-size="10" fill="{TEXT_DIM}">{lang.upper()}</text>
+        <rect x="26" y="{lang_y+6}" width="140" height="6" fill="none" stroke="{LINE}" stroke-width="1"/>
+        <rect x="26" y="{lang_y+6}" width="{bar_w}" height="6" fill="{ACCENT}" opacity="0.85"/>
+        '''
+        lang_y += 26
+
+    repo_y = lang_y + 24
+    repo_svg = f'<text x="26" y="{repo_y}" font-family="Consolas, monospace" font-size="11" fill="{ACCENT}">&gt; RECENT ACTIVITY</text>'
+    repo_y += 18
+    for name in s["recent_repos"]:
+        label = name.upper()
+        if len(label) > 24:
+            label = label[:21] + "..."
+        repo_svg += f'<text x="26" y="{repo_y}" font-family="Consolas, monospace" font-size="10" fill="{TEXT_DIM}">- {label}</text>'
+        repo_y += 16
+
+    svg = f'''<svg width="{PW}" height="{PH}" viewBox="0 0 {PW} {PH}" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="scan2" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="{BG}"/>
+      <line x1="0" y1="0" x2="4" y2="0" stroke="#0f1a17" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="{PW}" height="{PH}" fill="{BG}"/>
+  <rect width="{PW}" height="{PH}" fill="url(#scan2)" opacity="0.35"/>
+  <rect x="1" y="1" width="{PW-2}" height="{PH-2}" fill="none" stroke="{LINE}" stroke-width="1" opacity="0.6"/>
+  {corners}
+
+  <text x="26" y="40" font-family="Consolas, monospace" font-size="12" fill="{ACCENT}">&gt; LANGUAGE INDEX</text>
+  <line x1="26" y1="50" x2="{PW-26}" y2="50" stroke="{LINE}" stroke-width="1"/>
+
+  {lang_svg}
+  {repo_svg}
+
+  <line x1="26" y1="{PH-30}" x2="{PW-26}" y2="{PH-30}" stroke="{LINE}" stroke-width="1"/>
+  <text x="26" y="{PH-14}" font-family="Consolas, monospace" font-size="9" fill="{TEXT_DIM}">STATUS: INDEXED</text>
 </svg>'''
     return svg
 
 
 if __name__ == "__main__":
     stats = fetch_stats()
-    svg = render_svg(stats)
     with open("profile-card.svg", "w") as f:
-        f.write(svg)
-    print("profile-card.svg generated")
+        f.write(render_svg(stats))
+    with open("side-panel.svg", "w") as f:
+        f.write(render_side_panel(stats))
+    print("profile-card.svg and side-panel.svg generated")
