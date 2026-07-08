@@ -223,7 +223,7 @@ def render_svg(s):
 
   <!-- footer -->
   <line x1="40" y1="270" x2="{WIDTH-40}" y2="270" stroke="{LINE}" stroke-width="1"/>
-  <text x="40" y="292" font-family="Consolas, monospace" font-size="12" fill="{ACCENT}" filter="url(#glow)">&gt; LOWER YOUR BLADE. THE LOG SPEAKS FOR ITSELF.</text>
+  <text x="40" y="292" font-family="Consolas, monospace" font-size="12" fill="{ACCENT}" filter="url(#glow)">&gt; ------------------------GHOZT----------------------</text>
   <text x="{WIDTH-40}" y="292" font-family="Consolas, monospace" font-size="10" fill="{TEXT_DIM}" text-anchor="end">STATUS: OK</text>
 </svg>'''
     return svg
