@@ -1,39 +1,176 @@
-<svg width="900" height="1200"
-     viewBox="0 0 900 1200"
-     xmlns="http://www.w3.org/2000/svg">
+<svg width="510" height="358" viewBox="0 0 510 358" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.1" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
 
-    <defs>
-        <filter id="glow">
-            <feGaussianBlur stdDeviation="1.2" result="blur"/>
-            <feMerge>
-                <feMergeNode in="blur"/>
-                <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-        </filter>
-    </defs>
+  <rect width="510" height="358" fill="#070c0b"/>
+  <rect x="1" y="1" width="508" height="356" fill="none" stroke="#4a6b60" stroke-width="1" opacity="0.6"/>
+  <path d="M12 30 L12 12 L30 12" stroke="#8ffcd0" stroke-width="2" fill="none"/><path d="M498 30 L498 12 L480 12" stroke="#8ffcd0" stroke-width="2" fill="none"/><path d="M12 328 L12 346 L30 346" stroke="#8ffcd0" stroke-width="2" fill="none"/><path d="M498 328 L498 346 L480 346" stroke="#8ffcd0" stroke-width="2" fill="none"/>
 
-    <rect width="100%" height="100%" fill="#070c0b"/>
+  <text x="30" y="36" font-family="Consolas, monospace" font-size="12" fill="#8ffcd0">&gt; SIGNAL TRACE</text>
+  <line x1="30" y1="46" x2="480" y2="46" stroke="#4a6b60" stroke-width="1"/>
 
-    <text
-        x="450"
-        y="80"
-        text-anchor="middle"
-        font-family="Consolas, monospace"
-        font-size="12"
-        fill="#8ffcd0"
-        filter="url(#glow)"
-        xml:space="preserve">
+  
+        <text x="255.0" y="66" text-anchor="middle"
+              font-family="Consolas, monospace" font-size="11"
+              fill="#8ffcd0" filter="url(#glow)" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠖⠃⠐⠀⠀⡁⠀⠀⠀⠀⠀⠐⠆⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⢔⡤⠊⠁⠀⠀
+          <animate attributeName="opacity"
+                   values="1;1;0.6;1;0.9;1"
+                   dur="2.8s"
+                   begin="0.0s"
+                   repeatCount="indefinite"/>
+        </text>
+        <text x="255.0" y="80" text-anchor="middle"
+              font-family="Consolas, monospace" font-size="11"
+              fill="#8ffcd0" filter="url(#glow)" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠁⠀⠀⠘⠁⢀⠄⠀⠀⠀⢈⠓⠂⠠⡄⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣶⠿⠞⠋⠁⠀⠀⠀⠀⠀⠀
+          <animate attributeName="opacity"
+                   values="1;1;0.6;1;0.9;1"
+                   dur="2.8s"
+                   begin="0.06s"
+                   repeatCount="indefinite"/>
+        </text>
+        <text x="255.0" y="94" text-anchor="middle"
+              font-family="Consolas, monospace" font-size="11"
+              fill="#8ffcd0" filter="url(#glow)" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠒⠁⠀⠠⡒⢀⣔⣙⣀⣈⡩⠬⢁⠀⢑⠶⠤⡆⠤⡀⠀⠀⠀⠀⠀⠀⢀⠴⢲⣋⣽⣷⠟⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+          <animate attributeName="opacity"
+                   values="1;1;0.6;1;0.9;1"
+                   dur="2.8s"
+                   begin="0.12s"
+                   repeatCount="indefinite"/>
+        </text>
+        <text x="255.0" y="108" text-anchor="middle"
+              font-family="Consolas, monospace" font-size="11"
+              fill="#8ffcd0" filter="url(#glow)" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⠀⠀⠀⠗⣡⣶⣯⣿⡿⠿⠿⢿⣿⣷⣶⣤⣤⠤⠴⠦⠬⣤⣤⠄⣉⠉⠝⢲⣿⡷⠻⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀
+          <animate attributeName="opacity"
+                   values="1;1;0.6;1;0.9;1"
+                   dur="2.8s"
+                   begin="0.18s"
+                   repeatCount="indefinite"/>
+        </text>
+        <text x="255.0" y="122" text-anchor="middle"
+              font-family="Consolas, monospace" font-size="11"
+              fill="#8ffcd0" filter="url(#glow)" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⡀⠀⣰⣿⡿⠛⠋⣁⡀⠤⠤⢄⡀⠈⠛⢯⣿⣟⣾⣶⣶⣮⣭⣵⣾⣿⣟⠿⠉⢨⠖⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+          <animate attributeName="opacity"
+                   values="1;1;0.6;1;0.9;1"
+                   dur="2.8s"
+                   begin="0.24s"
+                   repeatCount="indefinite"/>
+        </text>
+        <text x="255.0" y="136" text-anchor="middle"
+              font-family="Consolas, monospace" font-size="11"
+              fill="#8ffcd0" filter="url(#glow)" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⢠⠳⡧⣻⡿⠋⢀⠒⠉⠀⠀⠀⠀⠀⠀⠉⠢⠀⠀⠙⠛⣻⣿⣿⣿⢿⣿⣿⠟⡱⠖⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+          <animate attributeName="opacity"
+                   values="1;1;0.6;1;0.9;1"
+                   dur="2.8s"
+                   begin="0.3s"
+                   repeatCount="indefinite"/>
+        </text>
+        <text x="255.0" y="150" text-anchor="middle"
+              font-family="Consolas, monospace" font-size="11"
+              fill="#8ffcd0" filter="url(#glow)" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⢠⣧⠓⣾⣿⠁⠀⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⢦⣠⣾⣿⠿⣿⣿⣿⡿⣫⠏⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+          <animate attributeName="opacity"
+                   values="1;1;0.6;1;0.9;1"
+                   dur="2.8s"
+                   begin="0.36s"
+                   repeatCount="indefinite"/>
+        </text>
+        <text x="255.0" y="164" text-anchor="middle"
+              font-family="Consolas, monospace" font-size="11"
+              fill="#8ffcd0" filter="url(#glow)" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠂⢃⣸⣿⠇⢠⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣿⠟⢿⠁⠸⡿⣿⣯⡶⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+          <animate attributeName="opacity"
+                   values="1;1;0.6;1;0.9;1"
+                   dur="2.8s"
+                   begin="0.42s"
+                   repeatCount="indefinite"/>
+        </text>
+        <text x="255.0" y="178" text-anchor="middle"
+              font-family="Consolas, monospace" font-size="11"
+              fill="#8ffcd0" filter="url(#glow)" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⢘⡄⠘⣿⣿⠀⠸⡀⠀⠀⠀⠀⠀⢀⣀⣴⣾⣿⡿⡟⡋⠐⡇⠀⢸⣿⣿⠃⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+          <animate attributeName="opacity"
+                   values="1;1;0.6;1;0.9;1"
+                   dur="2.8s"
+                   begin="0.48s"
+                   repeatCount="indefinite"/>
+        </text>
+        <text x="255.0" y="192" text-anchor="middle"
+              font-family="Consolas, monospace" font-size="11"
+              fill="#8ffcd0" filter="url(#glow)" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢡⠘⢰⣿⡿⡆⠀⣇⠀⣀⣠⣤⣶⣿⢷⢟⠻⠀⠈⠀⠀⠀⡇⠀⣼⣿⣿⠂⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+          <animate attributeName="opacity"
+                   values="1;1;0.6;1;0.9;1"
+                   dur="2.8s"
+                   begin="0.54s"
+                   repeatCount="indefinite"/>
+        </text>
+        <text x="255.0" y="206" text-anchor="middle"
+              font-family="Consolas, monospace" font-size="11"
+              fill="#8ffcd0" filter="url(#glow)" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠔⢀⡴⢯⣾⠟⡏⢀⣠⣿⣿⣿⣟⢟⡋⠅⠘⠉⠀⠀⠀⠀⢀⠀⠁⢠⣿⣟⠃⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+          <animate attributeName="opacity"
+                   values="1;1;0.6;1;0.9;1"
+                   dur="2.8s"
+                   begin="0.6s"
+                   repeatCount="indefinite"/>
+        </text>
+        <text x="255.0" y="220" text-anchor="middle"
+              font-family="Consolas, monospace" font-size="11"
+              fill="#8ffcd0" filter="url(#glow)" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠞⣻⣷⡿⢙⣩⣶⡿⠿⠛⠉⠑⢡⡁⠀⠀⠀⠀⠀⠀⢀⠔⠁⠀⣰⣿⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀
+          <animate attributeName="opacity"
+                   values="1;1;0.6;1;0.9;1"
+                   dur="2.8s"
+                   begin="0.66s"
+                   repeatCount="indefinite"/>
+        </text>
+        <text x="255.0" y="234" text-anchor="middle"
+              font-family="Consolas, monospace" font-size="11"
+              fill="#8ffcd0" filter="url(#glow)" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣡⣾⣥⣾⢫⡦⠾⠛⠙⠉⠀⠀⢀⣀⠀⠈⠙⠓⠦⠤⠤⠀⠘⠁⢀⡤⣾⡿⠏⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+          <animate attributeName="opacity"
+                   values="1;1;0.6;1;0.9;1"
+                   dur="2.8s"
+                   begin="0.72s"
+                   repeatCount="indefinite"/>
+        </text>
+        <text x="255.0" y="248" text-anchor="middle"
+              font-family="Consolas, monospace" font-size="11"
+              fill="#8ffcd0" filter="url(#glow)" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠔⣴⣾⣿⣿⢟⢝⠢⠃⢀⣤⢴⣾⣮⣷⣶⢿⣶⡤⣐⡀⠀⣠⣤⢶⣪⣿⣿⡿⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+          <animate attributeName="opacity"
+                   values="1;1;0.6;1;0.9;1"
+                   dur="2.8s"
+                   begin="0.78s"
+                   repeatCount="indefinite"/>
+        </text>
+        <text x="255.0" y="262" text-anchor="middle"
+              font-family="Consolas, monospace" font-size="11"
+              fill="#8ffcd0" filter="url(#glow)" xml:space="preserve">⠀⠀⠀⠀⠀⠀⡀⣦⣾⡿⡛⠵⠺⢈⡠⠶⠿⠥⠥⡭⠉⠉⢱⡛⠻⠿⣿⣿⣿⣿⣿⠿⠿⠿⠟⠭⠛⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+          <animate attributeName="opacity"
+                   values="1;1;0.6;1;0.9;1"
+                   dur="2.8s"
+                   begin="0.84s"
+                   repeatCount="indefinite"/>
+        </text>
+        <text x="255.0" y="276" text-anchor="middle"
+              font-family="Consolas, monospace" font-size="11"
+              fill="#8ffcd0" filter="url(#glow)" xml:space="preserve">⠀⠀⠀⢀⢴⠕⣋⠝⠕⠐⠀⠔⠉⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠁⠉⠁⠁⠁⠁⠈⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+          <animate attributeName="opacity"
+                   values="1;1;0.6;1;0.9;1"
+                   dur="2.8s"
+                   begin="0.9s"
+                   repeatCount="indefinite"/>
+        </text>
+        <text x="255.0" y="290" text-anchor="middle"
+              font-family="Consolas, monospace" font-size="11"
+              fill="#8ffcd0" filter="url(#glow)" xml:space="preserve">⢀⣠⠁⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+          <animate attributeName="opacity"
+                   values="1;1;0.6;1;0.9;1"
+                   dur="2.8s"
+                   begin="0.96s"
+                   repeatCount="indefinite"/>
+        </text>
 
-<tspan x="450" dy="0">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
-<tspan x="450" dy="16">⠀⠀⠀⠀⠀⠀⠀⠖⠃⠐⠀⠀⡁⠀⠀⠀⠀⠀⠐⠆</tspan>
-<tspan x="450" dy="16">⠀⠀⠀⠀⠀⠀⠀⠀⠘⠁⢀⠄⠀⠀⠀⢈⠓⠂⠠⡄</tspan>
-<tspan x="450" dy="16">...</tspan>
-
-        <animate
-            attributeName="opacity"
-            values="1;1;0.6;1;0.85;1"
-            dur="2.8s"
-            repeatCount="indefinite"/>
-    </text>
-
+  <line x1="30" y1="328" x2="480" y2="328" stroke="#4a6b60" stroke-width="1"/>
+  <text x="30" y="346" font-family="Consolas, monospace" font-size="9" fill="#5f8a7d">PATTERN: RECOGNIZED // STATUS: STABLE</text>
 </svg>
