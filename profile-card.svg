@@ -20,12 +20,12 @@
   <path d="M14 36 L14 14 L36 14" stroke="#8ffcd0" stroke-width="2" fill="none"/><path d="M746 36 L746 14 L724 14" stroke="#8ffcd0" stroke-width="2" fill="none"/><path d="M14 284 L14 306 L36 306" stroke="#8ffcd0" stroke-width="2" fill="none"/><path d="M746 284 L746 306 L724 306" stroke="#8ffcd0" stroke-width="2" fill="none"/>
 
   <!-- header -->
-  <text x="40" y="46" font-family="Consolas, monospace" font-size="14" fill="#8ffcd0" filter="url(#glow)">&gt; SCAN COMPLETE // USER: GHOZT-ZX</text>
+  <text x="40" y="46" font-family="Consolas, monospace" font-size="14" fill="#8ffcd0" filter="url(#glow)">&gt; SCAN COMPLETE // USER: KAUSHALYAHERATHCS</text>
   <text x="720" y="46" font-family="Consolas, monospace" font-size="10" fill="#5f8a7d" text-anchor="end">SIGNAL: STRONG</text>
   <line x1="40" y1="58" x2="720" y2="58" stroke="#4a6b60" stroke-width="1"/>
 
   <text x="40" y="80" font-family="Consolas, monospace" font-size="11" fill="#5f8a7d">&gt; IDENTIFYING ENTITY... GHOZT</text>
-  <text x="40" y="98" font-family="Consolas, monospace" font-size="11" fill="#5f8a7d">&gt; YEARS ACTIVE: 5   &gt; LAST SYNC: 2026-08-07 13:16 UTC</text>
+  <text x="40" y="98" font-family="Consolas, monospace" font-size="11" fill="#5f8a7d">&gt; YEARS ACTIVE: 5   &gt; LAST SYNC: 2026-08-07 15:19 UTC</text>
 
   <!-- stat rows -->
   
@@ -42,7 +42,7 @@
         <text x="330" y="194" font-family="Consolas, monospace" font-size="12" fill="#cdf5e6" text-anchor="end">2</text>
         
         <text x="40" y="216" font-family="Consolas, monospace" font-size="12" fill="#5f8a7d">&gt; CURRENT STREAK</text>
-        <text x="330" y="216" font-family="Consolas, monospace" font-size="12" fill="#cdf5e6" text-anchor="end">0 DAYS</text>
+        <text x="330" y="216" font-family="Consolas, monospace" font-size="12" fill="#cdf5e6" text-anchor="end">1 DAYS</text>
         
         <text x="40" y="238" font-family="Consolas, monospace" font-size="12" fill="#5f8a7d">&gt; TOP LANGUAGE</text>
         <text x="330" y="238" font-family="Consolas, monospace" font-size="12" fill="#cdf5e6" text-anchor="end">PYTHON</text>
@@ -57,7 +57,7 @@
     <rect x="400" y="150" width="320" height="14" fill="none" stroke="#4a6b60" stroke-width="1"/>
     <rect x="400" y="150" width="5" height="14" fill="#8ffcd0" opacity="0.85"/>
     
-  <text x="400" y="182" font-family="Consolas, monospace" font-size="11" fill="#cdf5e6">54 CONTRIBUTIONS (LAST YEAR)</text>
+  <text x="400" y="182" font-family="Consolas, monospace" font-size="11" fill="#cdf5e6">55 CONTRIBUTIONS (LAST YEAR)</text>
 
   <text x="400" y="220" font-family="Consolas, monospace" font-size="11" fill="#5f8a7d">&gt; BATTLEFIELD STATUS: ACTIVE</text>
   <text x="400" y="238" font-family="Consolas, monospace" font-size="11" fill="#5f8a7d">&gt; HOSTILES: 0   ALLIES: 2</text>
