@@ -22,7 +22,7 @@ jobs:
 
       - name: Generate card
         env:
-          GH_USERNAME: ghozt-zx
+          GH_USERNAME: kaushalyaherathcs
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python generate_card.py
 
